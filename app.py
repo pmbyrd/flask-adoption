@@ -43,6 +43,6 @@ def handle_new_pet():
         db.session.add(pet)
         db.session.commit()
         
-        return redirect('/')g
+        return redirect('/')
     else:
         return render_template("new.html", form=form)
