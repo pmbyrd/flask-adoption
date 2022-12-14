@@ -7,6 +7,7 @@
 
 <div class="container">
     <form action="/pets/new" method="post">
+        {{ form.hidden_tag() }}
 
         <h1 class="display-1 text-center">Edit Pet</h1>
     <div class="row justify-content-center">
@@ -26,6 +27,9 @@
             {{form.photo_url.label(class_="form-control")}}
             {{form.photo_url(class_="form-control col-md-8")}}
         </div>
+        <div class="col-md-8">
+            {{form.notes.label(class_="form-control")}}
+            {{form.notes(class_="form-control col-md-8")}}
         <div class="col-md-8">
             {{form.is_available.label(class_="form-control")}}
             {{form.is_available(class_="form-check-input")}}
