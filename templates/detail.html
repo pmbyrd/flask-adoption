@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+
+{% block title%} Detail{%endblock%}
+
+{% block content %}
+
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{pet.photo_url}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{pet.name}}</h5>
+          <p class="card-text">{{pet.notes}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{pet.age}}</li>
+          <li class="list-group-item">"{{pet.species}}</li>
+          <li class="list-group-item">Is Avaiable: {{pet.is_available}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="/pets/{{pet.id}}/edit" class="btn btn-warning">Edit</a>
+          <a href="/pets/new" class="btn btn-success">Add a Pet</a>
+          <a href="/" class="btn btn-info">Home</a>
+        </div>
+      </div>
+</div>
+
+
+{%endblock%}

@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+{% block title%} HOME {%endblock%}
+
+{% block content %}
+
+<div class="container-lg">
+    <h1 class="display-1 text-center">Sponser a Pet</h1>
+    <a href="/pets/new" class="btn btn-primary btn-lg">Add a Pet</a href="/pets/new">
+</div>
+    <div class="container-lg">
+    <div class="row">
+        <div class="row">
+            {% for pet in pets %}
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{pet.photo_url}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{pet.name}}</h5>
+                  <p class="card-text">{{pet.is_available}}</p>
+                  <a href="/pets/{{pet.id}}/detail" class="btn btn-primary">See More</a>
+                </div>
+              </div>
+
+            {%endfor%}
+        </div>
+    </div>
+</div>
+
+{%endblock%}
