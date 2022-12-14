@@ -12,7 +12,7 @@ p2 = Pet(name="Mr. Pickles", age="8", species="Lion", photo_url="https://images.
 p3 = Pet(name="Bobo", age="6", species="Chimpanzee", photo_url="https://images.pexels.com/photos/1238352/pexels-photo-1238352.jpeg?auto=compress&cs=tinysrgb&w=400")
 p4 = Pet(name="Nemo", age="5", species="Parrot", photo_url="https://images.pexels.com/photos/1004517/pexels-photo-1004517.jpeg?auto=compress&cs=tinysrgb&w=400")
 p5 = Pet(name="Suga and Spyce", age="1", species="Dog", photo_url="https://images.pexels.com/photos/14555653/pexels-photo-14555653.jpeg?auto=compress&cs=tinysrgb&w=400")
+p6 = Pet(name="Momo", age=2, species="Tiger")
 
-
-db.session.add_all([p1, p2, p3, p4, p5])
+db.session.add_all([p1, p2, p3, p4, p5, p6])
 db.session.commit()

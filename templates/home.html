@@ -17,7 +17,9 @@
                 <img class="card-img-top" src="{{pet.photo_url}}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{pet.name}}</h5>
-                  <p class="card-text">{{pet.is_available}}</p>
+                    {%if pet.available != False%}
+                    <p class="card-text"> Available </p>
+                    {% endif %}
                   <a href="/pets/{{pet.id}}/detail" class="btn btn-primary">See More</a>
                 </div>
               </div>

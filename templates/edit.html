@@ -5,5 +5,36 @@
 {% block content %}
 
 
+<div class="container">
+    <form action="/pets/new" method="post">
+
+        <h1 class="display-1 text-center">Edit Pet</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            {{form.name.label(class_="form-control")}}
+            {{form.name(class_="form-control col-md-8")}}
+        </div>
+        <div class="col-md-8">
+            {{form.species.label(class_="form-control")}}
+            {{form.species(class_="form-control col-md-8")}}
+        </div>
+        <div class="col-md-8">
+            {{form.age.label(class_="form-control")}}
+            {{form.age(class_="form-control")}}
+        </div>
+        <div class="col-md-8">
+            {{form.photo_url.label(class_="form-control")}}
+            {{form.photo_url(class_="form-control col-md-8")}}
+        </div>
+        <div class="col-md-8">
+            {{form.is_available.label(class_="form-control")}}
+            {{form.is_available(class_="form-check-input")}}
+        </div>
+    </div>
+        <a href="/" class="btn btn-primary">Save</a>
+        <a href="/" class="btn btn-warning">Home</a>
+
+    </form>
+</div>
 
 {%endblock%}
